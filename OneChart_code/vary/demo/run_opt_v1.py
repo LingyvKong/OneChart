@@ -17,11 +17,6 @@ import requests
 from io import BytesIO
 from transformers import TextStreamer
 from vary.model.plug.transforms import test_transform
-import boto3
-from megfile import s3_path
-import smart_open
-session = boto3.Session(aws_access_key_id=s3_path.get_access_token()[0],
-                                     aws_secret_access_key=s3_path.get_access_token()[1])
 
 DEFAULT_IMAGE_TOKEN = "<image>"
 DEFAULT_IMAGE_PATCH_TOKEN = '<imgpad>'
@@ -34,10 +29,6 @@ def load_image(image_file):
     if image_file.startswith('http') or image_file.startswith('https'):
         response = requests.get(image_file)
         image = Image.open(BytesIO(response.content)).convert('RGB')
-    elif image_file.startswith('s3://'):
-        with smart_open.open(image_file, 'rb', transport_params={'client': session.client('s3', endpoint_url=s3_path.get_endpoint_url())}) as f:
-            bytes_data = f.read()
-            image = Image.open(BytesIO(bytes_data), "r").convert('RGB')
     else:
         image = Image.open(image_file).convert('RGB')
     return image
