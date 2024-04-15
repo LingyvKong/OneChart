@@ -16,8 +16,7 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 from vary.data.base_dataset import BaseDataset
 from vary.utils.constants import *
 from vary.utils import conversation as conversation_lib
-import smart_open
-from megfile import s3_path
+
 # from vary.utils.constants import DEFAULT_DET_PATCH_TOKEN
 
 class ConversationDataset(BaseDataset):
@@ -177,19 +176,8 @@ class ConversationDataset(BaseDataset):
         if isinstance(data, dict):
             if 'image' in data:
                 image_path = self.list_image_path[i]
-                image_file = data['image']
-                if "train_images" in image_file:
-                    image_file = image_file.split("/")[-1]
-                if ('s3://' in image_path) or ('s3://' in image_file):
-                    try:
-                        with smart_open.open(image_path + image_file, 'rb', transport_params={'client': self.session.client('s3', endpoint_url=s3_path.get_endpoint_url())}) as f:
-                            bytes_data = f.read()
-                        image = Image.open(io.BytesIO(bytes_data), "r").convert('RGB')
-                    except:
-                        print(f'cannot identify image file {image_file}.')
-                        return self.__getitem__(0)
-                else:
-                    image = Image.open(image_path + image_file).convert('RGB')
+                image_file = data['image']                
+                image = Image.open(image_path + image_file).convert('RGB')
 
                 try:
                     image, image_1 = self.image_processor(image)
