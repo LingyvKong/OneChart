@@ -49,7 +49,7 @@ class varyOPTModel(OPTModel):
 
     def __init__(self, config: OPTConfig):
         super(varyOPTModel, self).__init__(config)
-        self.vision_tower = build_sam_vit_b(checkpoint='/data/jycode/checkpoint/pytorch_model.bin')
+        self.vision_tower = build_sam_vit_b()
         self.mm_projector = nn.Linear(1024, 768)
 
 
@@ -65,7 +65,7 @@ class varyOPTModel(OPTModel):
     ):
 
         # 224*224
-        image_processor = None # CLIPImageProcessor.from_pretrained('/data/hypertext/xpkong/detvary/checkpoints/vit-large-patch14') 
+        image_processor = None # CLIPImageProcessor.from_pretrained() 
         # 1024*1024
         image_processor_high = test_transform
 
