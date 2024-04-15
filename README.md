@@ -1,6 +1,6 @@
-<h3><a href="">OneChart: Purify the Chart Structural Extraction via One Auxiliary Token</a></h3>
+<h3><a href="https://github.com/LingyvKong/OneChart/blob/main/OneChart_paper.pdf">OneChart: Purify the Chart Structural Extraction via One Auxiliary Token</a></h3>
 <a href=""><img src="https://img.shields.io/badge/Paper-PDF-orange"></a> 
-<a href=""><img src="https://img.shields.io/badge/demo-blue"></a> 
+<a href='https://huggingface.co/kppkkp/OneChart/tree/main'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue'></a>
 <a href=""><img src="https://img.shields.io/badge/zhihu-yellow"></a> 
 
 Jinyue Chen*, Lingyu Kong*, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAAAJ&hl=en), Chenglong Liu, [Zheng Ge](https://joker316701882.github.io/), Liang Zhao, [Jianjian Sun](https://scholar.google.com/citations?user=MVZrGkYAAAAJ&hl=en), Chunrui Han, [Xiangyu Zhang](https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en)
@@ -12,7 +12,7 @@ Jinyue Chen*, Lingyu Kong*, [Haoran Wei](https://scholar.google.com/citations?us
 </p>
 
 ## Release
-- [2024/4/11] We have released the codes, weights and the ChartSE benchmark. 
+- [2024/4/15] 🔥 We have released the [code](https://github.com/LingyvKong/OneChart), [weights](https://huggingface.co/kppkkp/OneChart/tree/main) and the benchmark [data](https://drive.google.com/file/d/1nj4O8vrR9VKDCJkZeCRDC_3dPdx-mJmM/view?usp=sharing). 
 
 
 ## Contents
