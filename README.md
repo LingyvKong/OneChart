@@ -1,5 +1,5 @@
 <h3><a href="https://github.com/LingyvKong/OneChart/blob/main/OneChart_paper.pdf">OneChart: Purify the Chart Structural Extraction via One Auxiliary Token</a></h3>
-<a href=""><img src="https://img.shields.io/badge/Paper-PDF-orange"></a> 
+<a href="http://arxiv.org/abs/2404.09987"><img src="https://img.shields.io/badge/Paper-PDF-orange"></a> 
 <a href='https://huggingface.co/kppkkp/OneChart/tree/main'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue'></a>
 <a href=""><img src="https://img.shields.io/badge/zhihu-yellow"></a> 
 
@@ -26,7 +26,7 @@ Jinyue Chen*, Lingyu Kong*, [Haoran Wei](https://scholar.google.com/citations?us
 </p>
 
 ## 1. Benchmark Data and Evaluation Tool
-- Download the ChartSE images and jsons [here](https://drive.google.com/file/d/1nj4O8vrR9VKDCJkZeCRDC_3dPdx-mJmM/view?usp=sharing). 
+- Download the ChartSE images and jsons [here](https://drive.google.com/drive/folders/1YmOvxq0DfOA9YKoyCZDjpnTIkPNoyegQ?usp=sharing). 
 - Modify json path at the begining of `ChartSE_eval/eval_ChartSE.py`. Then run eval script:
    
 ```shell
@@ -76,10 +76,12 @@ deepspeed /data/OneChart_code/vary/train/train_opt.py     --deepspeed /data/OneC
 ## Citation
 If you find our work useful in your research, please consider citing OneChart:
 ```bibtex
-@article{chen2024onechart,
-  title={OneChart: Purify the Chart Structural Extraction via One Auxiliary Token},
-  author={Chen, Jinyue and Kong, Lingyu and Wei, Haoran and Liu, Chenglong and Ge, Zheng and Zhao, Liang and Sun, Jianjian and Han, Chunrui and Zhang, Xiangyu},
-  journal={arXiv preprint arXiv:},
-  year={2024}
+@misc{chen2024onechart,
+      title={OneChart: Purify the Chart Structural Extraction via One Auxiliary Token}, 
+      author={Jinyue Chen and Lingyu Kong and Haoran Wei and Chenglong Liu and Zheng Ge and Liang Zhao and Jianjian Sun and Chunrui Han and Xiangyu Zhang},
+      year={2024},
+      eprint={2404.09987},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
