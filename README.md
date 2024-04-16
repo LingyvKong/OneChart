@@ -61,7 +61,7 @@ Following the instruction, type `1` first, then type image path.
 ```shell
 deepspeed /data/OneChart_code/vary/train/train_opt.py     --deepspeed /data/OneChart_code/zero_config/zero2.json --model_name_or_path /data/checkpoints/varytiny/  --vision_tower /data/checkpoints/varytiny/ --freeze_vision_tower False --freeze_lm_model False --vision_select_layer -2 --use_im_start_end True --bf16 True --per_device_eval_batch_size 4 --gradient_accumulation_steps 1 --evaluation_strategy "no" --save_strategy "steps" --save_steps 250 --save_total_limit 1 --weight_decay 0. --warmup_ratio 0.03 --lr_scheduler_type "cosine" --logging_steps 1 --tf32 True --model_max_length 2048 --gradient_checkpointing True --dataloader_num_workers 4 --report_to none --per_device_train_batch_size 16 --num_train_epochs 1 --learning_rate 5e-5 --datasets render_chart_en+render_chart_zh  --output_dir /data/checkpoints/onechart-pretrain/
 ```
-- You can pay attention to modifying these parameters according to your needs: `--model_name_or_path`, `freeze_vision_tower`, `--datasets`, `--output_dir`
+- You can pay attention to modifying these parameters according to your needs: `--model_name_or_path`, `freeze_vision_tower`, `--datasets`, `--output_dir` 
 
 
 ## Acknowledgement
