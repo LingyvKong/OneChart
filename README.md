@@ -1,7 +1,7 @@
 <h3><a href="https://github.com/LingyvKong/OneChart/blob/main/OneChart_paper.pdf">OneChart: Purify the Chart Structural Extraction via One Auxiliary Token</a></h3>
 <a href="http://arxiv.org/abs/2404.09987"><img src="https://img.shields.io/badge/Paper-PDF-orange"></a> 
 <a href='https://huggingface.co/kppkkp/OneChart/tree/main'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue'></a>
-<a href=""><img src="https://img.shields.io/badge/zhihu-yellow"></a> 
+<a href="https://zhuanlan.zhihu.com/p/692607557"><img src="https://img.shields.io/badge/zhihu-yellow"></a> 
 
 Jinyue Chen*, Lingyu Kong*, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAAAJ&hl=en), Chenglong Liu, [Zheng Ge](https://joker316701882.github.io/), Liang Zhao, [Jianjian Sun](https://scholar.google.com/citations?user=MVZrGkYAAAAJ&hl=en), Chunrui Han, [Xiangyu Zhang](https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en)
 	
