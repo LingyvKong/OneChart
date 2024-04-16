@@ -12,7 +12,7 @@ Jinyue Chen*, Lingyu Kong*, [Haoran Wei](https://scholar.google.com/citations?us
 </p>
 
 ## Release
-- [2024/4/15] 🔥 We have released the [code](https://github.com/LingyvKong/OneChart), [weights](https://huggingface.co/kppkkp/OneChart/tree/main) and the benchmark [data](https://drive.google.com/file/d/1nj4O8vrR9VKDCJkZeCRDC_3dPdx-mJmM/view?usp=sharing). 
+- [2024/4/15] 🔥 We have released the [code](https://github.com/LingyvKong/OneChart), [weights](https://huggingface.co/kppkkp/OneChart/tree/main) and the benchmark [data](https://drive.google.com/drive/folders/1YmOvxq0DfOA9YKoyCZDjpnTIkPNoyegQ?usp=sharing). 
 
 
 ## Contents
