@@ -12,6 +12,7 @@ Jinyue Chen*, Lingyu Kong*, [Haoran Wei](https://scholar.google.com/citations?us
 </p>
 
 ## Release
+- [2024/4/21] 🔥🔥🔥 We present a Vary-tiny LAVIS codebase (for training from scratch) and the Vary-600k dataset (300K English and 300K Chinese pages) [here](https://github.com/Ucas-HaoranWei/Vary-tiny-600k) !!!
 - [2024/4/15] 🔥 We have released the [code](https://github.com/LingyvKong/OneChart), [weights](https://huggingface.co/kppkkp/OneChart/tree/main) and the benchmark [data](https://drive.google.com/drive/folders/1YmOvxq0DfOA9YKoyCZDjpnTIkPNoyegQ?usp=sharing). 
 
 
