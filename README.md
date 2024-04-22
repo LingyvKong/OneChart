@@ -1,4 +1,5 @@
 <h3><a href="https://github.com/LingyvKong/OneChart/blob/main/OneChart_paper.pdf">OneChart: Purify the Chart Structural Extraction via One Auxiliary Token</a></h3>
+<a href="https://onechartt.github.io/"><img src="https://img.shields.io/badge/Project-Page-Green"></a>
 <a href="http://arxiv.org/abs/2404.09987"><img src="https://img.shields.io/badge/Paper-PDF-orange"></a> 
 <a href='https://huggingface.co/kppkkp/OneChart/tree/main'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue'></a>
 <a href="https://zhuanlan.zhihu.com/p/692607557"><img src="https://img.shields.io/badge/zhihu-yellow"></a> 
