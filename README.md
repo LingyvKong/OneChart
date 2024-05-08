@@ -44,11 +44,10 @@ cd OneChart/OneChart_code/
 - Install Package
 ```Shell
 conda create -n onechart python=3.10 -y
-conda activate vary
+conda activate onechart
 pip install -e .
 pip install -r requirements.txt
 pip install ninja
-pip install flash-attn --no-build-isolation
 ```
 - Download the OneChart weights [here](https://huggingface.co/kppkkp/OneChart/tree/main). 
   
