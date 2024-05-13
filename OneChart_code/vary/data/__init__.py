@@ -19,7 +19,7 @@ class DataCollatorForSupervisedDataset(object):
         images_high = [torch.stack(instance['image_high']) for instance in instances]
 
         images = list(zip(images, images_high))
-
+        loc_labels = [instance['loc_labels'] if 'loc_labels' in instance.keys() else [] for instance in instances]
 
         input_ids = torch.nn.utils.rnn.pad_sequence(
             input_ids,
@@ -36,6 +36,7 @@ class DataCollatorForSupervisedDataset(object):
             labels=labels,
             attention_mask=input_ids.ne(self.tokenizer.pad_token_id),
             images=images,
+            loc_labels=loc_labels,
         )
         return batch
 
@@ -48,6 +49,9 @@ def make_supervised_data_module(interleave, with_box, tokenizer, data_args):
     elif data_args.conversation_version == 'opt':
         from vary.data.caption_opt import CaptionDataset
         dataset_cls = CaptionDataset
+    elif data_args.conversation_version == 'v1':
+        from mmgpt.data.conversation_dataset_v1_with_number import ConversationDataset
+        dataset_cls = ConversationDataset
 
     train_dataset = dataset_cls(
         tokenizer=tokenizer,
