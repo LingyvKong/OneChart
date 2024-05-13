@@ -50,7 +50,7 @@ def make_supervised_data_module(interleave, with_box, tokenizer, data_args):
         from vary.data.caption_opt import CaptionDataset
         dataset_cls = CaptionDataset
     elif data_args.conversation_version == 'v1':
-        from mmgpt.data.conversation_dataset_v1_with_number import ConversationDataset
+        from vary.data.conversation_dataset_v1_with_number import ConversationDataset
         dataset_cls = ConversationDataset
 
     train_dataset = dataset_cls(
