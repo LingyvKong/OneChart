@@ -180,7 +180,7 @@ class ConversationDataset(BaseDataset):
         )
 
     def __getitem__(self, i) -> Dict[str, torch.Tensor]:
-        # data = self.list_data_dict[i]
+        
         data = copy.deepcopy(self.list_data_dict[i])
 
         if isinstance(data, dict):
