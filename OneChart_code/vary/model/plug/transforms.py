@@ -159,7 +159,7 @@ train_transform = alb_wrapper(
             alb.GaussNoise(20, p=0.08),
             alb.GaussianBlur((3, 3), p=0.03),
             alb.Resize(1024, 1024),
-            alb.Normalize(IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD),
+            alb.Normalize((0., 0., 0.), (1., 1., 1.)),
             ToTensorV2(),
         ]
     )
