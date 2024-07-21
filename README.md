@@ -13,7 +13,7 @@ Jinyue Chen*, Lingyu Kong*, [Haoran Wei](https://scholar.google.com/citations?us
 </p>
 
 ## Release
-- [2024/7/16] 🎉🎉🎉 OneChart is accepted by ACM'MM 2024!
+- [2024/7/16] 🎉🎉🎉 OneChart is accepted by ACM'MM 2024 oral!
 - [2024/4/21] 🔥🔥🔥 We have released the **web demo** in [Project Page](https://onechartt.github.io/). Have fun!!
 - [2024/4/15] 🔥 We have released the [code](https://github.com/LingyvKong/OneChart), [weights](https://huggingface.co/kppkkp/OneChart/tree/main) and the benchmark [data](https://drive.google.com/drive/folders/1YmOvxq0DfOA9YKoyCZDjpnTIkPNoyegQ?usp=sharing). 
 
