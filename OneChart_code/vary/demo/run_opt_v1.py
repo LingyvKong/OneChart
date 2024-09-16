@@ -88,7 +88,7 @@ def eval_model(args):
     image_token_len = 256
 
     chose_prompt = {
-        '1': "Covert the key information of the chart to a python dict:",
+        '1': "Convert the key information of the chart to a python dict:",
         '2': "stop",
     }
     query = input('Query: [1] chart [2] stop: ')
