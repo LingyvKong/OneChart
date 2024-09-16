@@ -13,12 +13,14 @@ Jinyue Chen*, Lingyu Kong*, [Haoran Wei](https://scholar.google.com/citations?us
 </p>
 
 ## Release
+- [2024/9/16] 🔥 Support quickly trying the demo using [huggingface](https://huggingface.co/kppkkp/OneChart/blob/main/README.md).
 - [2024/7/21] 🎉🎉🎉 OneChart is accepted by ACM'MM 2024 **Oral**! (3.97%)
 - [2024/4/21] 🔥🔥🔥 We have released the **web demo** in [Project Page](https://onechartt.github.io/). Have fun!!
 - [2024/4/15] 🔥 We have released the [code](https://github.com/LingyvKong/OneChart), [weights](https://huggingface.co/kppkkp/OneChart/tree/main) and the benchmark [data](https://drive.google.com/drive/folders/1YmOvxq0DfOA9YKoyCZDjpnTIkPNoyegQ?usp=sharing). 
 
 
 ## Contents
+- [0. Quickly try the demo using hugginface](#0-quickly-try-the-demo-using-hugginface)
 - [1. Benchmark Data and Evaluation Tool](#1-benchmark-data-and-evaluation-tool)
 - [2. Install](#2-install)
 - [3. Demo](#3-demo)
@@ -27,6 +29,20 @@ Jinyue Chen*, Lingyu Kong*, [Haoran Wei](https://scholar.google.com/citations?us
 <p align="center">
 <img src="assets/append_all.png" style="width: 700px" align=center>
 </p>
+
+## 0. Quickly try the demo using hugginface
+```python
+from transformers import AutoModel, AutoTokenizer
+
+tokenizer = AutoTokenizer.from_pretrained('kppkkp/OneChart', trust_remote_code=True, use_fast=False, padding_side="right")
+model = AutoModel.from_pretrained('kppkkp/OneChart', trust_remote_code=True, low_cpu_mem_usage=True, device_map='cuda')
+model = model.eval().cuda()
+
+# input your test image
+image_file = 'image.png'
+res = model.chat(tokenizer, image_file, reliable_check=True)
+print(res)
+```
 
 ## 1. Benchmark Data and Evaluation Tool
 - Download the ChartSE images and jsons [here](https://drive.google.com/drive/folders/1YmOvxq0DfOA9YKoyCZDjpnTIkPNoyegQ?usp=sharing). 
