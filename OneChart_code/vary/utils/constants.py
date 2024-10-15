@@ -24,32 +24,20 @@ DEFAULT_NUMBER_TOKEN = "<Number>"
 
 CONVERSATION_DATA = {
 
-    # pair 4m
-    'laion-coco-4m': {
-        'images': '',
-        'annotations': '',
-    }, 
-
     'cc665k': {
         'images': "/path_to/LLaVA1.5/images/",
-        'annotations': "/path_to/LLaVA1.5/llava_v1_5_66k.json",
+        'annotations': "/path_to/LLaVA1.5/llava_v1_5_665k.json",
     },
 
-    'pdf': {
-        'images': "",
-        'annotations': "",
+    'render_chart_en': {
+        'images': "/image_root_path/",
+        'annotations': "/your_json.json",
     },
 
-    'docvqa_train': {
-        'images': "",
-        'annotations': "",
+    'render_chart_zh': {
+        'images': "/image_root_path/",
+        'annotations': "/your_json.json",
     },
-
-    'chartqa_train': {
-        'images': "",
-        'annotations': "",
-    },
-
 
 
 }
