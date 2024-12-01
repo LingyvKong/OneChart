@@ -75,7 +75,7 @@ python vary/demo/run_opt_v1.py  --model-name  /onechart_weights_path/
 Following the instruction, type `1` first, then type image path.
 
 ## 4. Train
-- Prepare your dataset json, the format example is:
+- Prepare your dataset json. If the auxiliary head is Not used and trained, the format example is:
 ```json
 [
  {
@@ -90,6 +90,28 @@ Following the instruction, type `1` first, then type image path.
     "value": "{\"title\": \"Share of children who are wasted, 2010\", \"source\": \"None\", \"x_title\": \"None\", \"y_title\": \"None\", \"values\": {\"Haiti\": \"6.12%\", \"Libya\": \"5.32%\", \"Morocco\": \"5.11%\", \"Lebanon\": \"4.5%\", \"Colombia\": \"1.45%\"}}"
    }
   ]
+ },
+ {
+   ...
+ }
+]
+```
+else:
+```json
+[
+ {
+  "image": "000000.png",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>\nConvert the key information of the chart to a python dict:"
+   },
+   {
+    "from": "gpt",
+    "value": "<Number>{\"title\": \"Share of children who are wasted, 2010\", \"source\": \"None\", \"x_title\": \"None\", \"y_title\": \"None\", \"values\": {\"Haiti\": \"6.12%\", \"Libya\": \"5.32%\", \"Morocco\": \"5.11%\", \"Lebanon\": \"4.5%\", \"Colombia\": \"1.45%\"}}"
+   }
+  ],
+  "Numbers": [6.12, 5.32, 5.11, 4.5, 1.45]
  },
  {
    ...
