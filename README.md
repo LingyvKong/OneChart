@@ -87,10 +87,10 @@ Following the instruction, type `1` first, then type image path.
    },
    {
     "from": "gpt",
-    "value": "<Number>{\"title\": \"Share of children who are wasted, 2010\", \"source\": \"None\", \"x_title\": \"None\", \"y_title\": \"None\", \"values\": {\"Haiti\": \"6.12%\", \"Libya\": \"5.32%\", \"Morocco\": \"5.11%\", \"Lebanon\": \"4.5%\", \"Colombia\": \"1.45%\"}}"
+    "value": "<Number>{\"title\": \"Share of children who are wasted, 2010\", \"source\": \"None\", \"x_title\": \"None\", \"y_title\": \"None\", \"values\": {\"Haiti\": \"6.12%\", \"Libya\": \"5.32%\", \"Morocco\": \"5.11%\", \"Lebanon\": \"4.5%\", \"Colombia\": \"1.45%\"}}",
+    "Numbers": [6.12, 5.32, 5.11, 4.5, 1.45]
    }
   ],
-  "Numbers": [6.12, 5.32, 5.11, 4.5, 1.45]
  },
  {
    ...
