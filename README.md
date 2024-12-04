@@ -75,28 +75,7 @@ python vary/demo/run_opt_v1.py  --model-name  /onechart_weights_path/
 Following the instruction, type `1` first, then type image path.
 
 ## 4. Train
-- Prepare your dataset json. If the auxiliary head is Not used and trained, the format example is:
-```json
-[
- {
-  "image": "000000.png",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "<image>\nConvert the key information of the chart to a python dict:"
-   },
-   {
-    "from": "gpt",
-    "value": "{\"title\": \"Share of children who are wasted, 2010\", \"source\": \"None\", \"x_title\": \"None\", \"y_title\": \"None\", \"values\": {\"Haiti\": \"6.12%\", \"Libya\": \"5.32%\", \"Morocco\": \"5.11%\", \"Lebanon\": \"4.5%\", \"Colombia\": \"1.45%\"}}"
-   }
-  ]
- },
- {
-   ...
- }
-]
-```
-else:
+- Prepare your dataset json, the format example is:
 ```json
 [
  {
@@ -118,6 +97,28 @@ else:
  }
 ]
 ```
+In case you don't want to use and train the auxiliary head, comment out this line [`data_dict['loc_labels'] = self.extract_numbers(data["conversations"])`](https://github.com/LingyvKong/OneChart/blob/868942ace688231ba74e7ab3f1fe028d6c4776c6/OneChart_code/vary/data/conversation_dataset_v1_with_number.py#L214), and the json format can be:
+```json
+[
+ {
+  "image": "000000.png",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>\nConvert the key information of the chart to a python dict:"
+   },
+   {
+    "from": "gpt",
+    "value": "{\"title\": \"Share of children who are wasted, 2010\", \"source\": \"None\", \"x_title\": \"None\", \"y_title\": \"None\", \"values\": {\"Haiti\": \"6.12%\", \"Libya\": \"5.32%\", \"Morocco\": \"5.11%\", \"Lebanon\": \"4.5%\", \"Colombia\": \"1.45%\"}}"
+   }
+  ]
+ },
+ {
+   ...
+ }
+]
+```
+
 - Fill in the data path to `OneChart/OneChart_code/vary/utils/constants.py`. Then a example script is:
 ```shell
 deepspeed /data/OneChart_code/vary/train/train_opt.py     --deepspeed /data/OneChart_code/zero_config/zero2.json --model_name_or_path /data/checkpoints/varytiny/  --vision_tower /data/checkpoints/varytiny/ --freeze_vision_tower False --freeze_lm_model False --vision_select_layer -2 --use_im_start_end True --bf16 True --per_device_eval_batch_size 4 --gradient_accumulation_steps 1 --evaluation_strategy "no" --save_strategy "steps" --save_steps 250 --save_total_limit 1 --weight_decay 0. --warmup_ratio 0.03 --lr_scheduler_type "cosine" --logging_steps 1 --tf32 True --model_max_length 2048 --gradient_checkpointing True --dataloader_num_workers 4 --report_to none --per_device_train_batch_size 16 --num_train_epochs 1 --learning_rate 5e-5 --datasets render_chart_en+render_chart_zh  --output_dir /data/checkpoints/onechart-pretrain/
