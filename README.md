@@ -138,12 +138,11 @@ deepspeed /data/OneChart_code/vary/train/train_opt.py     --deepspeed /data/OneC
 ## Citation
 If you find our work useful in your research, please consider citing OneChart:
 ```bibtex
-@misc{chen2024onechart,
-      title={OneChart: Purify the Chart Structural Extraction via One Auxiliary Token}, 
-      author={Jinyue Chen and Lingyu Kong and Haoran Wei and Chenglong Liu and Zheng Ge and Liang Zhao and Jianjian Sun and Chunrui Han and Xiangyu Zhang},
-      year={2024},
-      eprint={2404.09987},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{chen2024onechart,
+  title={Onechart: Purify the chart structural extraction via one auxiliary token},
+  author={Chen, Jinyue and Kong, Lingyu and Wei, Haoran and Liu, Chenglong and Ge, Zheng and Zhao, Liang and Sun, Jianjian and Han, Chunrui and Zhang, Xiangyu},
+  booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},
+  pages={147--155},
+  year={2024}
 }
 ```
